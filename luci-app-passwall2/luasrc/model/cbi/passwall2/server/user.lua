@@ -337,6 +337,10 @@ uuid:depends({ type = "Xray", protocol = "vmess" })
 uuid:depends({ type = "Xray", protocol = "vless" })
 uuid:depends({ type = "Xray", protocol = "trojan" })
 
+alter_id = s:option(Value, "alter_id", translate("Alter ID"))
+alter_id:depends({ type = "V2ray", protocol = "vmess" })
+alter_id:depends({ type = "Xray", protocol = "vmess" })
+
 tls = s:option(Flag, "tls", translate("TLS"))
 tls.default = 0
 tls.validate = function(self, value, t)
